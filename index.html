@@ -229,6 +229,129 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/16/python的bisect模块/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Machiro-Shina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/16/python的bisect模块/" itemprop="url">python的bisect模块</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-16T17:40:01+08:00">
+                2018-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在使用python进行二分法查询和在有序序列进行插入操作时可以使用bisect模块</p>
+<h3 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h3><p>bisect.insort(arr, el)会将元素el插入有序序列arr中，且不打乱原序列的顺序<br>bisect.bisect(arr, el)会判断在保证序列顺序的情况下el元素应该插入的位置并返回，但不会执行插入操作。<br>bisect.bisect_left(arr, el)返回的是应该插入位置的前一个位置</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import bisect</span><br><span class="line">nums = [2, 3, 4, 1, 8, 3, 4]</span><br><span class="line">sorted_nums = sorted(nums)</span><br><span class="line"><span class="built_in">print</span>(sorted_nums)</span><br><span class="line">bisect.insort(sorted_nums, 5)</span><br><span class="line"><span class="built_in">print</span>(sorted_nums)</span><br><span class="line"></span><br><span class="line">def get_rank(scores, ranks=<span class="string">'EDCBA'</span>, rank_scores=[60, 70, 80, 90]):</span><br><span class="line">    <span class="keyword">for</span> score <span class="keyword">in</span> scores:</span><br><span class="line">        <span class="built_in">print</span>(ranks[bisect.bisect(rank_scores, score)])</span><br><span class="line"></span><br><span class="line">scores = [55, 22, 85, 90, 77, 63, 100]</span><br><span class="line">get_rank(scores)</span><br></pre></td></tr></table></figure>
+<h4 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h4><p>[1, 2, 3, 3, 4, 4, 8]<br>[1, 2, 3, 3, 4, 4, 5, 8]<br>E<br>E<br>B<br>A<br>C<br>D<br>A</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/16/python的具名元组namedtuple/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -645,7 +768,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
